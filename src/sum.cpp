@@ -13,5 +13,8 @@ NOTES:
 
 int sum(int a, int b)
 {
-	return 0;
+	if (b == 0)
+		return a;
+	else
+		return sum(a^b, (a&b) << 1);
 }
